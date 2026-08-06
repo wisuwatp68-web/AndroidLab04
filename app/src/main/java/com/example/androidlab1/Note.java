@@ -1,37 +1,22 @@
 package com.example.androidlab1;
 
 public abstract class Note {
-
-    // Attributes
     private String title;
     private String content;
     private String createdDate;
+    private User owner;
 
-    // Getter และ Setter
-    public String getTitle() {
-        return title;
-    }
+    public void setTitle(String title) { this.title = title; }
+    public String getTitle() { return this.title; }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+    public void setContent(String content) { this.content = content; }
+    public String getContent() { return this.content; }
 
-    public String getContent() {
-        return content;
-    }
+    public void setCreatedDate(String date) { this.createdDate = date; }
+    public String getCreatedDate() { return this.createdDate; }
 
-    public void setContent(String content) {
-        this.content = content;
-    }
+    public void setOwner(User owner) { this.owner = owner; }
+    public User getOwner() { return this.owner; }
 
-    public String getCreatedDate() {
-        return createdDate;
-    }
-
-    public void setCreatedDate(String createdDate) {
-        this.createdDate = createdDate;
-    }
-
-    // Abstract Method
     public abstract void displayNote();
 }
